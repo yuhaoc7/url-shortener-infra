@@ -7,7 +7,7 @@ A production-oriented, distributed URL Shortener service built with **FastAPI**,
 ```mermaid
 graph LR
     Client([Client]) --> LB[Load Balancer]
-    LB --> API[API Service\n(FastAPI)]
+    LB --> API["API Service\n(FastAPI)"]
     API --> Redis[(Redis)]
     API --> DB[(PostgreSQL)]
 ```
