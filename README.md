@@ -4,15 +4,12 @@ A production-oriented, distributed URL Shortener service built with **FastAPI**,
 
 ## Architecture
 
-![Architecture](https://mermaid.ink/img/pako:eNpVkM1Kw0AQx19lmJMP4CWEIhSRFGo9iFRPY5u1Q3Y3ZCeWln33Jg0tfQDP8_8bfjODmTEGjWdFxc-Ot44-WD9wY-R6d4-v7zD8hO_v8DwM4_Q0TuM4nZ2nF3EchWkYh_P0Mk6j8OIsupmG82g6im7C8Pzi_CqK03l4fnF2dnZ2Pj2_uLgI0-llmMZxFKaXlyf0s3K8M2K8g_0D7B-gH_nQ8c7x_oHxA_QjH3o-GN5D_wD9yId-4EPHB8f7B8YP0I986Ad-5MN-5EPHB8f7B8YP0I986Ad-5EM_8qHj50_9yIeOD473D4wfoB_50P_wIf8A7Yy8TQ)
-
-*Architecture Diagram Placeholder (ASCII)*
-
-```
-[Client] -> [Load Balancer] -> [API Service (FastAPI)]
-                                  |      |
-                                  v      v
-                             [Redis]  [PostgreSQL]
+```mermaid
+graph LR
+    Client([Client]) --> LB[Load Balancer]
+    LB --> API[API Service\n(FastAPI)]
+    API --> Redis[(Redis)]
+    API --> DB[(PostgreSQL)]
 ```
 
 ### Key Features
